@@ -330,7 +330,7 @@ with open("mytv.txt", 'w', encoding='utf-8') as file:
     file.write('影视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '影' in channel_name and 'CCTV6' in channel_name and 'CCTV8' in channel_name:
+        if '影' in channel_name or 'CCTV6' in channel_name or 'CCTV8' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
@@ -392,7 +392,7 @@ with open("mytv.m3u", 'w', encoding='utf-8') as file:
     #file.write('影视频道,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '影' in channel_name and 'CCTV6' in channel_name and 'CCTV8' in channel_name:
+        if '影' in channel_name or 'CCTV6' in channel_name or 'CCTV8' in channel_name:
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
