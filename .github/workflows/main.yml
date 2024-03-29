@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: pip install selenium requests futures eventlet
 
-      - name: Run search
-        run: python ${{ github.workspace }}/temp/search.py
+      - name: Run Search
+        run: python ${{ github.workspace }}/temp/Search.py
 
       #- name: Run cctv
         #run: python ${{ github.workspace }}/cctv.py
