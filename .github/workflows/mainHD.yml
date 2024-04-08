@@ -1,8 +1,8 @@
-name:mytvHD
+name: mytvHD
 
 on:
-  schedule:
-    - cron: '0 9,19 * * *'
+  #schedule:
+   # - cron: '0 9,19 * * *'
   push:
     branches:
       - main
