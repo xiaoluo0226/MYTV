@@ -7,9 +7,10 @@ import re
 import os
 import threading
 from queue import Queue
+import sys
 import eventlet
 eventlet.monkey_patch()
-
+sys.setrecursionlimit(1000000) #例如这里设置为一百万
 urls = [
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGViZWki",  # Hebei (河北)
     "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iYmVpamluZyI%3D",  # Beijing (北京)
